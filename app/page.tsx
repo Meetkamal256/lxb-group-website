@@ -1,4 +1,5 @@
 import AboutPreview from "./components/home/About-preview";
+import FeaturedProjects from "./components/home/Featured-projects";
 import Hero from "./components/home/Hero";
 import LeadershipPreview from "./components/home/Leadership-preview";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <AboutPreview />
       <LeadershipPreview />
+      <FeaturedProjects />
     </main>
   );
 }

@@ -36,3 +36,24 @@ export const teamMembers = [
     role: "Digital Solutions & Automation",
   },
 ];
+
+export const projects = [
+  {
+    name: "Hillview Residence",
+    category: "Residential",
+    service: "Concept Design",
+    description:
+      "A modern residential design combining functionality, comfort and contemporary aesthetics.",
+    image: "/featured2.png",
+    alt: "Architectural concept rendering of a contemporary luxury residence",
+  },
+  {
+    name: "Riverside Office Complex",
+    category: "Commercial",
+    service: "Design & Visualization",
+    description:
+      "A contemporary office complex designed for productivity, collaboration and long-term value.",
+    image: "/featured2.png",
+    alt: "Architectural concept rendering of a modern glass office complex",
+  },
+];
