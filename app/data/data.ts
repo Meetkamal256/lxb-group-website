@@ -18,3 +18,21 @@ export const divisionLinks = [
     href: "/divisions/digital-solutions",
   },
 ];
+
+export const teamMembers = [
+  {
+    initials: "HM",
+    name: "Hafiz Muhammad",
+    role: "Founder & Group Director",
+  },
+  {
+    initials: "MM",
+    name: "Mubarak Muhammad",
+    role: "Architecture & 3D Visualization",
+  },
+  {
+    initials: "KM",
+    name: "Kamaluddeen Muhammad",
+    role: "Digital Solutions & Automation",
+  },
+];
