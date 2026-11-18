@@ -34,7 +34,7 @@ export default function Header() {
   const activeDivision = divisionLinks.some((division) =>
     isActive(division.href),
   );
-
+  
   const activeLinkClass =
     "after:absolute after:bottom-[-29px] after:left-0 after:h-[3px] after:w-full after:bg-[#B99A5B]";
 
@@ -43,7 +43,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white">
-      <div className="mx-auto flex h-20 max-w-360 items-center justify-between px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-20 container-max items-center justify-between px-5 sm:px-8 lg:px-12">
         {/* Logo */}
         <Link
           href="/"
