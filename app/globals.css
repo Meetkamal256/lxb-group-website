@@ -1,19 +1,18 @@
-
 @import "tailwindcss";
 
 :root {
   /* Brand colours */
-  --color-navy: #14243A;
-  --color-gold: #B99A5B;
-  --color-off-white: #F5F3EE;
-  --color-slate: #64748B;
-  --color-white: #FFFFFF;
-  
+  --color-navy: #14243a;
+  --color-gold: #b99a5b;
+  --color-off-white: #f5f3ee;
+  --color-slate: #64748b;
+  --color-white: #ffffff;
+
   /* Semantic colours */
   --background: var(--color-white);
   --foreground: var(--color-navy);
   --muted: var(--color-slate);
-  --border: #E5E7EB;
+  --border: #e5e7eb;
 }
 
 @theme inline {
@@ -23,7 +22,7 @@
   --color-gold: var(--color-gold);
   --color-off-white: var(--color-off-white);
   --color-slate: var(--color-slate);
-  
+
   --font-sans: var(--font-manrope);
 }
 @layer components {
@@ -47,10 +46,6 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  border: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
