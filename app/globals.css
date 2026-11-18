@@ -7,7 +7,7 @@
   --color-off-white: #f5f3ee;
   --color-slate: #64748b;
   --color-white: #ffffff;
-
+  
   /* Semantic colours */
   --background: var(--color-white);
   --foreground: var(--color-navy);
@@ -22,7 +22,7 @@
   --color-gold: var(--color-gold);
   --color-off-white: var(--color-off-white);
   --color-slate: var(--color-slate);
-
+  
   --font-sans: var(--font-manrope);
 }
 @layer components {
