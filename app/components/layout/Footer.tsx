@@ -25,7 +25,7 @@ const divisionLinks = [
 ];
 
 const footerLinkStyles =
-  "inline-flex text-sm text-[#64748B] transition-colors duration-200 hover:!text-[#B58632] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]";
+  "inline-flex text-sm text-slate transition-colors duration-200 hover:!text-gold hover:underline! hover:underline-offset-4! focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold";
 
 export default function Footer() {
   return (
@@ -36,7 +36,7 @@ export default function Footer() {
           <Link
             href="/"
             aria-label="LXB Group homepage"
-            className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]"
+            className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
           >
             <Image
               src="/logo/Logo.png"
@@ -48,8 +48,8 @@ export default function Footer() {
           </Link>
 
           <div className="mt-5 border-l border-gray-300 pl-4">
-            <h3 className="text-sm font-bold text-[#14243A]">LXB Group</h3>
-            <p className="mt-2 max-w-55 text-xs leading-6 text-[#64748B]">
+            <h3 className="text-sm font-bold text-navy">LXB Group</h3>
+            <p className="mt-2 max-w-55 text-xs leading-6 text-slate">
               A Multidisciplinary Professional Services Company
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="border-gray-200 text-center sm:border-l sm:pl-6 lg:text-left">
-          <h3 className="mb-4 text-sm font-bold text-[#14243A]">Quick Links</h3>
+          <h3 className="mb-4 text-sm font-bold text-navy">Quick Links</h3>
 
           <ul className="space-y-2">
             {quickLinks.map((link) => (
@@ -72,9 +72,7 @@ export default function Footer() {
 
         {/* Divisions */}
         <div className="border-gray-200 text-center sm:border-l sm:pl-6 lg:text-left">
-          <h3 className="mb-4 text-sm font-bold text-[#14243A]">
-            Our Divisions
-          </h3>
+          <h3 className="mb-4 text-sm font-bold text-navy">Our Divisions</h3>
 
           <ul className="space-y-3">
             {divisionLinks.map((division) => (
@@ -89,25 +87,23 @@ export default function Footer() {
 
         {/* Contact Information */}
         <div className="border-gray-200 text-center sm:border-l sm:pl-6 lg:text-left">
-          <h3 className="mb-4 text-sm font-bold text-[#14243A]">
-            Get in Touch
-          </h3>
+          <h3 className="mb-4 text-sm font-bold text-navy">Get in Touch</h3>
 
-          <ul className="space-y-4 text-sm text-[#64748B]">
+          <ul className="space-y-4 text-sm text-slate">
             <li className="flex items-center justify-center gap-3 lg:justify-start">
-              <span aria-hidden="true" className="font-semibold text-[#14243A]">
+              <span aria-hidden="true" className="font-semibold text-navy">
                 ⌖
               </span>
               <span>Abuja, Nigeria</span>
             </li>
 
             <li className="flex items-center justify-center gap-3 lg:justify-start">
-              <span aria-hidden="true" className="font-semibold text-[#14243A]">
+              <span aria-hidden="true" className="font-semibold text-navy">
                 ✉
               </span>
               <a
                 href="mailto:info@lxbgroup.com"
-                className="transition-colors duration-200 hover:text-[#B58632] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]"
+                className="transition-colors duration-200 hover:text-gold! hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
               >
                 info@lxbgroup.com
               </a>
@@ -116,7 +112,7 @@ export default function Footer() {
             <li className="flex justify-center lg:justify-start">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 font-semibold text-[#B58632] transition-colors duration-200 hover:text-[#8A672B] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]"
+                className="inline-flex items-center gap-2 font-semibold text-gold transition-colors duration-200 hover:text-gold! hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
               >
                 Contact our team
                 <span aria-hidden="true">→</span>
@@ -129,11 +125,11 @@ export default function Footer() {
       {/* Copyright */}
       <div className="border-t border-gray-200">
         <div className="container-main flex flex-col items-center justify-between gap-3 py-5 text-center sm:flex-row sm:text-left">
-          <p className="text-xs text-[#64748B]">
+          <p className="text-xs text-slate">
             © 2026 LXB Group. All rights reserved.
           </p>
 
-          <p className="text-xs text-[#64748B]">
+          <p className="text-xs text-slate">
             Professional Solutions. Built Around Your Ambition.
           </p>
         </div>
