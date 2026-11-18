@@ -25,7 +25,7 @@ const divisionLinks = [
 ];
 
 const footerLinkStyles =
-  "inline-flex text-sm text-[#64748B] transition-colors duration-200 hover:text-[#B58632] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]";
+  "inline-flex text-sm text-[#64748B] transition-colors duration-200 hover:!text-[#B58632] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]";
 
 export default function Footer() {
   return (
