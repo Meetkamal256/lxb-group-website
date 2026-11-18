@@ -25,14 +25,14 @@ const divisionLinks = [
 ];
 
 const footerLinkStyles =
-  "inline-flex text-sm text-[#64748B] transition-all duration-200 hover:translate-x-1 hover:text-[#B58632] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]";
+  "inline-flex text-sm text-[#64748B] transition-colors duration-200 hover:text-[#B58632] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]";
 
 export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="container-main grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_1.3fr_1fr] lg:gap-8 lg:py-14">
-        {/* Company Identity */}    
-        <div className="flex flex-col items-start">
+        {/* Company Identity */}
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <Link
             href="/"
             aria-label="LXB Group homepage"
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div className="border-gray-200 sm:border-l sm:pl-6">
+        <div className="border-gray-200 text-center sm:border-l sm:pl-6 lg:text-left">
           <h3 className="mb-4 text-sm font-bold text-[#14243A]">Quick Links</h3>
 
           <ul className="space-y-2">
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         {/* Divisions */}
-        <div className="border-gray-200 sm:border-l sm:pl-6">
+        <div className="border-gray-200 text-center sm:border-l sm:pl-6 lg:text-left">
           <h3 className="mb-4 text-sm font-bold text-[#14243A]">
             Our Divisions
           </h3>
@@ -88,20 +88,20 @@ export default function Footer() {
         </div>
 
         {/* Contact Information */}
-        <div className="border-gray-200 sm:border-l sm:pl-6">
+        <div className="border-gray-200 text-center sm:border-l sm:pl-6 lg:text-left">
           <h3 className="mb-4 text-sm font-bold text-[#14243A]">
             Get in Touch
           </h3>
 
           <ul className="space-y-4 text-sm text-[#64748B]">
-            <li className="flex items-start gap-3">
+            <li className="flex items-center justify-center gap-3 lg:justify-start">
               <span aria-hidden="true" className="font-semibold text-[#14243A]">
                 ⌖
               </span>
               <span>Abuja, Nigeria</span>
             </li>
 
-            <li className="flex items-start gap-3">
+            <li className="flex items-center justify-center gap-3 lg:justify-start">
               <span aria-hidden="true" className="font-semibold text-[#14243A]">
                 ✉
               </span>
@@ -113,10 +113,10 @@ export default function Footer() {
               </a>
             </li>
 
-            <li>
+            <li className="flex justify-center lg:justify-start">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 font-semibold text-[#B58632] transition-all duration-200 hover:translate-x-1 hover:text-[#8A672B] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]"
+                className="inline-flex items-center gap-2 font-semibold text-[#B58632] transition-colors duration-200 hover:text-[#8A672B] hover:underline hover:underline-offset-4 focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B58632]"
               >
                 Contact our team
                 <span aria-hidden="true">→</span>
