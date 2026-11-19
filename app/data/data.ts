@@ -155,3 +155,12 @@ export const integratedExpertise = [
       "We focus on delivering professional services and solutions shaped around each client's objectives and needs.",
   },
 ];
+
+export const divisionEnquiry = {
+  eyebrow: "LET'S WORK TOGETHER",
+  title: "Have a Project in Mind?",
+  description:
+    "Whether you need construction consultancy, architectural services or digital solutions, our team is ready to discuss your requirements.",
+  buttonText: "Discuss a Project",
+  href: "/contact",
+};

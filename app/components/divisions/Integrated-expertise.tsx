@@ -16,7 +16,7 @@ export default function IntegratedExpertise() {
               One Group, Shared Purpose
             </span>
           </div>
-
+          
           <h2 className="text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">
             Integrated Expertise, Greater Value
           </h2>
