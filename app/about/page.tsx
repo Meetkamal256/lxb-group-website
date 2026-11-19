@@ -1,3 +1,5 @@
+import HowWeWork from "../components/about/How-we-work";
+import Leadership from "../components/about/Leadership";
 import MissionVisionValues from "../components/about/Mission-vision-values";
 
 export default function AboutHero() {
@@ -108,6 +110,8 @@ export default function AboutHero() {
       </div>
 
       <MissionVisionValues />
+      <HowWeWork />
+      <Leadership />
     </section>
   );
 }

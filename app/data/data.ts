@@ -66,3 +66,30 @@ export const coreValues = [
   "Quality",
   "Client Focus",
 ];
+
+export const workSteps = [
+  {
+    number: "01",
+    title: "Understand",
+    description:
+      "We take time to understand your needs, objectives and project requirements."
+  },
+  {
+    number: "02",
+    title: "Plan",
+    description:
+      "We develop a clear approach tailored to your goals and expectations."
+  },
+  {
+    number: "03",
+    title: "Deliver",
+    description:
+      "We apply our expertise to deliver practical, quality-focused solutions."
+  },
+  {
+    number: "04",
+    title: "Support",
+    description:
+      "We remain available to provide guidance and support beyond delivery."
+  },
+];
