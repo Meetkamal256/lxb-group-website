@@ -164,3 +164,18 @@ export const divisionEnquiry = {
   buttonText: "Discuss a Project",
   href: "/contact",
 };
+
+export const quantitySurveyingHero = {
+  eyebrow: "OUR DIVISIONS",
+  title: "Quantity Surveying & Construction Consultancy",
+  description:
+    "Professional commercial and cost management services that help clients plan, procure and deliver successful construction projects with confidence and value.",
+  primaryButton: {
+    label: "Discuss a Project",
+    href: "/contact",
+  },
+  secondaryButton: {
+    label: "View All Divisions",
+    href: "/divisions",
+  },
+};
