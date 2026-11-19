@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import type { FocusEvent } from "react";
 import { navigationLinks, divisionLinks } from "@/app/data/data";
 
 export default function Header() {
@@ -11,6 +12,7 @@ export default function Header() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [divisionsOpen, setDivisionsOpen] = useState(false);
+  const [desktopDivisionsOpen, setDesktopDivisionsOpen] = useState(false);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -25,21 +27,26 @@ export default function Header() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
+  const isDivisionsActive =
+    pathname === "/divisions" || pathname.startsWith("/divisions/");
+
   const primaryLinks = navigationLinks.filter(
     (link) => link.href !== "/contact",
   );
 
   const contactLink = navigationLinks.find((link) => link.href === "/contact");
 
-  const activeDivision = divisionLinks.some((division) =>
-    isActive(division.href),
-  );
-  
   const activeLinkClass =
-    "after:absolute after:bottom-[-29px] after:left-0 after:h-[3px] after:w-full after:bg-[#B99A5B]";
+    "after:absolute after:bottom-[-29px] after:left-0 after:h-[3px] after:w-full after:bg-gold";
 
   const inactiveLinkClass =
-    "after:absolute after:bottom-[-29px] after:left-0 after:h-[3px] after:w-0 after:bg-[#B99A5B] after:transition-all after:duration-200 hover:after:w-full";
+    "after:absolute after:bottom-[-29px] after:left-0 after:h-[3px] after:w-0 after:bg-gold after:transition-all after:duration-200 hover:after:w-full";
+
+  const handleDesktopBlur = (event: FocusEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+      setDesktopDivisionsOpen(false);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white">
@@ -71,32 +78,42 @@ export default function Header() {
               key={link.href}
               href={link.href}
               aria-current={isActive(link.href) ? "page" : undefined}
-              className={`relative text-sm font-semibold transition-colors hover:text-[#B99A5B] ${
+              className={`relative text-sm font-semibold transition-colors hover:text-gold ${
                 isActive(link.href)
-                  ? `text-[#14243A] ${activeLinkClass}`
-                  : `text-[#14243A] ${inactiveLinkClass}`
+                  ? `text-navy ${activeLinkClass}`
+                  : `text-navy ${inactiveLinkClass}`
               }`}
             >
               {link.label}
             </Link>
           ))}
 
-          {/* Divisions Dropdown */}
-          <div className="group relative">
+          {/* Desktop Divisions Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setDesktopDivisionsOpen(true)}
+            onMouseLeave={() => setDesktopDivisionsOpen(false)}
+            onFocus={() => setDesktopDivisionsOpen(true)}
+            onBlur={handleDesktopBlur}
+          >
             <button
               type="button"
               aria-haspopup="true"
-              aria-expanded={activeDivision}
-              className={`relative flex items-center gap-2 text-sm font-semibold transition-colors hover:text-[#B99A5B] ${
-                activeDivision
-                  ? `text-[#14243A] ${activeLinkClass}`
-                  : `text-[#14243A] ${inactiveLinkClass}`
+              aria-expanded={desktopDivisionsOpen}
+              aria-controls="desktop-divisions-menu"
+              onClick={() => setDesktopDivisionsOpen(!desktopDivisionsOpen)}
+              className={`relative flex items-center gap-2 text-sm font-semibold transition-colors hover:text-gold ${
+                isDivisionsActive
+                  ? `text-navy ${activeLinkClass}`
+                  : `text-navy ${inactiveLinkClass}`
               }`}
             >
               Our Divisions
               <svg
                 aria-hidden="true"
-                className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                className={`h-4 w-4 transition-transform duration-200 ${
+                  desktopDivisionsOpen ? "rotate-180" : ""
+                }`}
                 viewBox="0 0 20 20"
                 fill="none"
               >
@@ -110,17 +127,43 @@ export default function Header() {
               </svg>
             </button>
 
-            <div className="invisible absolute left-0 top-full z-50 w-80 translate-y-2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+            {/* Desktop Dropdown Content */}
+            <div
+              id="desktop-divisions-menu"
+              className={`absolute left-0 top-full z-50 w-80 pt-4 transition-all duration-200 ${
+                desktopDivisionsOpen
+                  ? "visible translate-y-0 opacity-100"
+                  : "invisible translate-y-2 opacity-0"
+              }`}
+            >
               <div className="rounded-lg border border-gray-100 bg-white p-2 shadow-lg">
+                {/* Divisions Overview */}
+                <Link
+                  href="/divisions"
+                  aria-current={pathname === "/divisions" ? "page" : undefined}
+                  onClick={() => setDesktopDivisionsOpen(false)}
+                  className={`mb-1 block rounded-md px-4 py-3 text-sm font-semibold transition-colors ${
+                    pathname === "/divisions"
+                      ? "bg-off-white text-navy"
+                      : "text-navy hover:bg-off-white hover:text-gold"
+                  }`}
+                >
+                  Explore All Divisions
+                </Link>
+
+                <div className="my-1 border-t border-gray-100" />
+
+                {/* Individual Division Links */}
                 {divisionLinks.map((division) => (
                   <Link
                     key={division.href}
                     href={division.href}
                     aria-current={isActive(division.href) ? "page" : undefined}
+                    onClick={() => setDesktopDivisionsOpen(false)}
                     className={`block rounded-md px-4 py-3 text-sm font-medium transition-colors ${
                       isActive(division.href)
-                        ? "bg-[#F5F3EE] text-[#14243A]"
-                        : "text-[#14243A] hover:bg-[#F5F3EE] hover:text-[#B99A5B]"
+                        ? "bg-off-white text-navy"
+                        : "text-navy hover:bg-off-white hover:text-gold"
                     }`}
                   >
                     {division.label}
@@ -130,14 +173,15 @@ export default function Header() {
             </div>
           </div>
 
+          {/* Contact Link */}
           {contactLink && (
             <Link
               href={contactLink.href}
               aria-current={isActive(contactLink.href) ? "page" : undefined}
-              className={`relative text-sm font-semibold transition-colors hover:text-[#B99A5B] ${
+              className={`relative text-sm font-semibold transition-colors hover:text-gold ${
                 isActive(contactLink.href)
-                  ? `text-[#14243A] ${activeLinkClass}`
-                  : `text-[#14243A] ${inactiveLinkClass}`
+                  ? `text-navy ${activeLinkClass}`
+                  : `text-navy ${inactiveLinkClass}`
               }`}
             >
               {contactLink.label}
@@ -161,7 +205,7 @@ export default function Header() {
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-[#14243A] transition-colors hover:bg-[#F5F3EE] lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md text-navy transition-colors hover:bg-off-white lg:hidden"
         >
           {mobileMenuOpen ? (
             <svg
@@ -205,8 +249,8 @@ export default function Header() {
                 aria-current={isActive(link.href) ? "page" : undefined}
                 className={`rounded-md px-3 py-3 text-sm font-semibold ${
                   isActive(link.href)
-                    ? "bg-[#F5F3EE] text-[#14243A]"
-                    : "text-[#14243A] hover:bg-[#F5F3EE]"
+                    ? "bg-off-white text-navy"
+                    : "text-navy hover:bg-off-white"
                 }`}
               >
                 {link.label}
@@ -217,8 +261,11 @@ export default function Header() {
             <button
               type="button"
               aria-expanded={divisionsOpen}
+              aria-controls="mobile-divisions-menu"
               onClick={() => setDivisionsOpen(!divisionsOpen)}
-              className="flex items-center justify-between rounded-md px-3 py-3 text-left text-sm font-semibold text-[#14243A] hover:bg-[#F5F3EE]"
+              className={`flex items-center justify-between rounded-md px-3 py-3 text-left text-sm font-semibold text-navy hover:bg-off-white ${
+                isDivisionsActive ? "bg-off-white" : ""
+              }`}
             >
               Our Divisions
               <svg
@@ -239,8 +286,27 @@ export default function Header() {
               </svg>
             </button>
 
+            {/* Mobile Dropdown Content */}
             {divisionsOpen && (
-              <div className="ml-3 flex flex-col border-l-2 border-[#B99A5B] pl-3">
+              <div
+                id="mobile-divisions-menu"
+                className="ml-3 flex flex-col border-l-2 border-gold pl-3"
+              >
+                {/* Divisions Overview */}
+                <Link
+                  href="/divisions"
+                  onClick={closeMobileMenu}
+                  aria-current={pathname === "/divisions" ? "page" : undefined}
+                  className={`rounded-md px-3 py-3 text-sm transition-colors ${
+                    pathname === "/divisions"
+                      ? "bg-off-white font-semibold text-navy"
+                      : "font-semibold text-navy hover:bg-off-white"
+                  }`}
+                >
+                  Explore All Divisions
+                </Link>
+
+                {/* Individual Division Links */}
                 {divisionLinks.map((division) => (
                   <Link
                     key={division.href}
@@ -249,8 +315,8 @@ export default function Header() {
                     aria-current={isActive(division.href) ? "page" : undefined}
                     className={`rounded-md px-3 py-3 text-sm transition-colors ${
                       isActive(division.href)
-                        ? "bg-[#F5F3EE] font-semibold text-[#14243A]"
-                        : "text-[#64748B] hover:bg-[#F5F3EE] hover:text-[#14243A]"
+                        ? "bg-off-white font-semibold text-navy"
+                        : "text-slate hover:bg-off-white hover:text-navy"
                     }`}
                   >
                     {division.label}
@@ -259,6 +325,7 @@ export default function Header() {
               </div>
             )}
 
+            {/* Contact Link */}
             {contactLink && (
               <Link
                 href={contactLink.href}
@@ -266,8 +333,8 @@ export default function Header() {
                 aria-current={isActive(contactLink.href) ? "page" : undefined}
                 className={`rounded-md px-3 py-3 text-sm font-semibold ${
                   isActive(contactLink.href)
-                    ? "bg-[#F5F3EE] text-[#14243A]"
-                    : "text-[#14243A] hover:bg-[#F5F3EE]"
+                    ? "bg-off-white text-navy"
+                    : "text-navy hover:bg-off-white"
                 }`}
               >
                 {contactLink.label}
