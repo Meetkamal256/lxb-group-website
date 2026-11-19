@@ -134,3 +134,24 @@ export const workSteps = [
       "We remain available to provide guidance and support beyond delivery.",
   },
 ];
+
+export const integratedExpertise = [
+  {
+    number: "01",
+    title: "Complementary Expertise",
+    description:
+      "Our three specialist divisions bring together construction consultancy, architectural design and digital technology.",
+  },
+  {
+    number: "02",
+    title: "Collaborative Approach",
+    description:
+      "Our different areas of expertise can work together to address project requirements from multiple perspectives.",
+  },
+  {
+    number: "03",
+    title: "Practical Solutions",
+    description:
+      "We focus on delivering professional services and solutions shaped around each client's objectives and needs.",
+  },
+];
