@@ -57,3 +57,12 @@ export const projects = [
     alt: "Architectural concept rendering of a modern glass office complex",
   },
 ];
+
+export const coreValues = [
+  "Integrity",
+  "Reliability",
+  "Professionalism",
+  "Innovation",
+  "Quality",
+  "Client Focus",
+];

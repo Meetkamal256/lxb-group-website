@@ -1,3 +1,5 @@
+import MissionVisionValues from "../components/about/Mission-vision-values";
+
 export default function AboutHero() {
   return (
     <section className="relative overflow-hidden bg-off-white">
@@ -104,6 +106,8 @@ export default function AboutHero() {
           </svg>
         </div>
       </div>
+
+      <MissionVisionValues />
     </section>
   );
 }
