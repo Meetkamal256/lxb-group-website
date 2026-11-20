@@ -179,3 +179,30 @@ export const quantitySurveyingHero = {
     href: "/divisions",
   },
 };
+
+export const quantitySurveyingServices = [
+  {
+    title: "Cost Management",
+    description: "Cost planning, estimation, control and reporting.",
+  },
+  {
+    title: "Measurement & Valuation",
+    description: "Accurate measurement, interim valuations and final accounts.",
+  },
+  {
+    title: "Tendering & Procurement",
+    description: "Tender documentation, bid evaluation and contract award.",
+  },
+  {
+    title: "Contract Administration",
+    description: "Contract management, variations, claims and dispute support.",
+  },
+  {
+    title: "Project Advisory",
+    description: "Commercial advice, risk management and value optimization.",
+  },
+  {
+    title: "Construction Consultancy",
+    description: "End-to-end support from project planning to delivery.",
+  },
+];
