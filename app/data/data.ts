@@ -206,3 +206,22 @@ export const quantitySurveyingServices = [
     description: "End-to-end support from project planning to delivery.",
   },
 ];
+
+export const quantitySurveyingExpertise = {
+  eyebrow: "OUR EXPERTISE",
+  title: "Adding Commercial Value to Your Projects",
+  benefits: [
+    {
+      title: "Cost Efficiency",
+      description: "Maximizing value and minimizing risk.",
+    },
+    {
+      title: "Commercial Insight",
+      description: "Practical, project-focused advice and solutions.",
+    },
+    {
+      title: "Reliable Delivery",
+      description: "Support that keeps your project on track.",
+    },
+  ],
+};
