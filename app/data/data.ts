@@ -225,3 +225,31 @@ export const quantitySurveyingExpertise = {
     },
   ],
 };
+
+export const quantitySurveyingApproach = {
+  eyebrow: "OUR APPROACH",
+  title: "A Practical and Structured Process",
+  steps: [
+    {
+      number: "01",
+      title: "Understand",
+      description: "We review your project requirements and objectives.",
+    },
+    {
+      number: "02",
+      title: "Plan",
+      description: "We develop a commercial and delivery strategy.",
+    },
+    {
+      number: "03",
+      title: "Manage",
+      description: "We support implementation and manage commercial risks.",
+    },
+    {
+      number: "04",
+      title: "Deliver",
+      description:
+        "We help achieve a successful, value-driven project outcome.",
+    },
+  ],
+};
