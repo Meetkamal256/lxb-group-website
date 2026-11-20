@@ -253,3 +253,36 @@ export const quantitySurveyingApproach = {
     },
   ],
 };
+
+export const quantitySurveyingLeader = {
+  eyebrow: "DIVISION LEADERSHIP",
+  name: "Hafiz Muhammad",
+  role: "Founder & Group Director",
+  profession: "Quantity Surveyor",
+  image: "/mubarak.jpg",
+  biography:
+    "Hafiz Muhammad is a Quantity Surveyor with over a decade of experience in the Nigerian construction industry. His professional experience includes cost estimation, bills of quantities, construction supervision, contract management and project consultancy. He brings practical industry knowledge and a strong focus on professional standards, cost management and project delivery.",
+  qualifications: [
+    "B.Tech. Quantity Surveying",
+    "Professional Member, Nigerian Institute of Quantity Surveyors (MNIQS)",
+    "Registered Quantity Surveyor (RQS)",
+  ],
+};
+
+export const quantitySurveyingEnquiry = {
+  eyebrow: "LET'S WORK TOGETHER",
+  title: "Let's Discuss Your Project",
+  description:
+    "Whether you're planning a new development, managing construction costs or seeking professional quantity surveying advice, we're ready to understand your requirements and discuss how we can help.",
+  buttonText: "Discuss a Project",
+  href: "/contact",
+};
+
+export const digitalSolutionsEnquiry = {
+  eyebrow: "LET'S WORK TOGETHER",
+  title: "Let's Discuss Your Digital Project",
+  description:
+    "Whether you need a website, business application, API integration or workflow automation, let's discuss how we can help bring your ideas to life.",
+  buttonText: "Discuss a Project",
+  href: "/contact",
+};
