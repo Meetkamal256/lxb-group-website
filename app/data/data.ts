@@ -286,3 +286,31 @@ export const digitalSolutionsEnquiry = {
   buttonText: "Discuss a Project",
   href: "/contact",
 };
+
+export const digitalSolutionsServices = [
+  {
+    title: "Website Development",
+    description:
+      "Modern, responsive websites for businesses and organizations, built to establish a strong online presence and communicate effectively with their audiences.",
+  },
+  {
+    title: "Web Applications & Software",
+    description:
+      "Custom web applications, business dashboards and digital tools designed to support specific business needs and everyday operations.",
+  },
+  {
+    title: "API Integrations",
+    description:
+      "Connecting websites, applications and third-party platforms through API integrations, webhooks and secure data exchange.",
+  },
+  {
+    title: "Workflow Automation",
+    description:
+      "Automating repetitive business processes and connecting different applications using modern automation platforms to reduce manual work and improve efficiency.",
+  },
+  {
+    title: "AI-Powered Automation",
+    description:
+      "Integrating AI capabilities into business workflows to support tasks such as lead qualification, information processing and automated content generation.",
+  },
+];
