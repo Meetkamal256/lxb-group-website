@@ -332,3 +332,20 @@ export const digitalSolutionsValues = [
       "We help businesses make better use of technology, reduce repetitive tasks and improve the way they manage everyday operations.",
   },
 ];
+
+export const digitalSolutionsLeader = {
+  eyebrow: "OUR TEAM",
+  name: "Kamaluddeen Muhammad",
+  role: "Team Member",
+  profession: "Software Developer | Web Development & Automation",
+  image: "/mubarak.jpg",
+  biography:
+    "Kamaluddeen is a software developer with experience in frontend development, API integrations and workflow automation. He builds responsive websites, web applications and custom integrations, connecting third-party services through APIs and webhooks to address practical business needs",
+
+  qualifications: [
+    "ALX Software Engineering Programme Certificate",
+    "Meta Front-End Developer Professional Certificate",
+    "Make.com Levels 1–4 Training",
+    "Make.com Custom App Development Specialty Badge",
+  ],
+};
