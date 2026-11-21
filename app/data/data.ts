@@ -314,3 +314,21 @@ export const digitalSolutionsServices = [
       "Integrating AI capabilities into business workflows to support tasks such as lead qualification, information processing and automated content generation.",
   },
 ];
+
+export const digitalSolutionsValues = [
+  {
+    title: "Business Focused",
+    description:
+      "We take time to understand business objectives and develop digital solutions that address real needs and practical challenges.",
+  },
+  {
+    title: "Practical & Flexible",
+    description:
+      "We adopt suitable technologies and approaches to create solutions that fit different requirements, workflows and budgets.",
+  },
+  {
+    title: "Efficiency & Growth",
+    description:
+      "We help businesses make better use of technology, reduce repetitive tasks and improve the way they manage everyday operations.",
+  },
+];
