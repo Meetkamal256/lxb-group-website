@@ -3,6 +3,8 @@ import DigitalSolutionsHero from "../../components/digital-solutions/Digital-sol
 import DigitalSolutionsValues from "@/app/components/digital-solutions/Digital-solutions-values";
 import DigitalSolutionsApproach from "@/app/components/digital-solutions/Digital-solutions-approach";
 import DigitalSolutionsLeadership from "@/app/components/digital-solutions/Digital-solutions-leadership";
+import { digitalSolutionsEnquiry } from "@/app/data/data";
+import DivisionEnquiry from "@/app/components/shared/Division-enquiry";
 
 export default function DigitalSolutionsPage() {
   return (
@@ -12,6 +14,7 @@ export default function DigitalSolutionsPage() {
       <DigitalSolutionsValues />
       <DigitalSolutionsApproach />
       <DigitalSolutionsLeadership />
+      <DivisionEnquiry {...digitalSolutionsEnquiry} />
     </main>
   );
 }
